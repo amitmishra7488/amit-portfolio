@@ -6,15 +6,54 @@ import { MdWifiCalling } from 'react-icons/md';
 import { FaGithub, FaLinkedinIn } from 'react-icons/fa';
 import { HiOutlineChevronDoubleUp } from 'react-icons/hi';
 import ContactImg from '../public/assets/contact.jpg';
+// import twilio from 'twilio';
 
 const Contact = () => {
-  // const [input,setInput] = useState({
-  //   name:"",
-  //   phone:"",
-  //   email:"",
-  //   message:"",
-  //   subject:""
-  // })
+  const [input,setInput] = useState({
+    name:"",
+    phone:"",
+    email:"",
+    message:"",
+    subject:""
+  })
+
+//   const accountSid = 'ACcdc69f7c5800e898850ee2e62e773cc8';
+// const authToken = '216509cdf4bbe489adc0133388d91641';
+
+  
+
+  
+
+//   const handleSendMessage = async (data) => {
+//     const client = twilio(accountSid, authToken)
+
+//     try {
+//       await client.messages.create({
+//         body: 'hihhiihi',
+//         from: 'whatsapp:+14155238886',
+//         to: 'whatsapp:+919471957184'
+//       });
+//       console.log("sent")
+//     } catch (error) {
+//       console.error(error);
+//       console.log("failed")
+//     }
+//   };
+
+
+
+
+
+  const handleChange=(e)=>{
+    setInput({...input,[e.target.name]: e.target.value})
+  }
+
+  const handleSubmit=()=>{
+    console.log(input);
+
+    // handleSendMessage(input);
+
+  }
   return (
     <div id='contact' className='w-full lg:h-screen'>
       <div className='max-w-[1240px] m-auto px-2 py-16 w-full '>
@@ -101,6 +140,7 @@ const Contact = () => {
                       className='border-2 rounded-lg p-3 flex border-gray-300'
                       type='text'
                       name='name'
+                      onChange={handleChange}
                     />
                   </div>
                   <div className='flex flex-col'>
@@ -111,6 +151,7 @@ const Contact = () => {
                       className='border-2 rounded-lg p-3 flex border-gray-300'
                       type='text'
                       name='phone'
+                      onChange={handleChange}
                     />
                   </div>
                 </div>
@@ -120,6 +161,7 @@ const Contact = () => {
                     className='border-2 rounded-lg p-3 flex border-gray-300'
                     type='email'
                     name='email'
+                    onChange={handleChange}
                   />
                 </div>
                 <div className='flex flex-col py-2'>
@@ -128,6 +170,7 @@ const Contact = () => {
                     className='border-2 rounded-lg p-3 flex border-gray-300'
                     type='text'
                     name='subject'
+                    onChange={handleChange}
                   />
                 </div>
                 <div className='flex flex-col py-2'>
@@ -136,9 +179,10 @@ const Contact = () => {
                     className='border-2 rounded-lg p-3 border-gray-300'
                     rows='10'
                     name='message'
+                    onChange={handleChange}
                   ></textarea>
                 </div>
-                <button className='w-full p-4 text-gray-100 mt-4'>
+                <button className='w-full p-4 text-gray-100 mt-4' onClick={handleSubmit}>
                   Send Message
                 </button>
               </form>
