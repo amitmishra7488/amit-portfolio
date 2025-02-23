@@ -1,8 +1,6 @@
-import Image from 'next/image';
-import Link from 'next/link';
 import React from 'react';
 import friendZone from '../public/assets/projects/friendZone.png';
-import bestBuy from '../public/assets/projects/bestHome.png';
+import trackUs from '../public/assets/projects/homepage_track.png';
 import primeVideo from '../public/assets/projects/primeVideo.png';
 import lensKart from '../public/assets/projects/lenskart.png'
 import ProjectItem from './ProjectItem';
@@ -17,17 +15,17 @@ const Projects = () => {
         <h2 className='py-4'>What I&apos;ve Built</h2>
         <div className='grid md:grid-cols-2 gap-8'>
           <ProjectItem
+            title='Track Us'
+            backgroundImg={trackUs}
+            projectUrl='/trackus'
+            tech='Node Js,React JS, MongoDB, Redux'
+
+          />
+          <ProjectItem
             title='Friend Zone'
             backgroundImg={friendZone}
             projectUrl='/friendzone'
             tech='React JS, NodeJs'
-          />
-          <ProjectItem
-            title='BestBuy.com ecommerce'
-            backgroundImg={bestBuy}
-            projectUrl='/bestbuy'
-            tech='React JS'
-
           />
           <ProjectItem
             title='PrimeVideo App'

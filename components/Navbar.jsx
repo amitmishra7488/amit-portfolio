@@ -64,7 +64,7 @@ const Navbar = () => {
             </li>
             <li className='ml-10 text-sm uppercase hover:border-b'>
               <a
-                href='https://drive.google.com/file/d/1-jAfqx57TXAlAaq_KK_OSyofEp5FHQ6T/view'
+                href='https://drive.google.com/file/d/1yDwRzKx3F5N6IDrUGQV3pLcQAzjY0amH/view'
                 target='_blank'
                 rel='noreferrer'
               >Resume</a>
