@@ -17,28 +17,7 @@ const Contact = () => {
     subject:""
   })
 
-//   const accountSid = 'ACcdc69f7c5800e898850ee2e62e773cc8';
-// const authToken = '216509cdf4bbe489adc0133388d91641';
 
-  
-
-  
-
-//   const handleSendMessage = async (data) => {
-//     const client = twilio(accountSid, authToken)
-
-//     try {
-//       await client.messages.create({
-//         body: 'hihhiihi',
-//         from: 'whatsapp:+14155238886',
-//         to: 'whatsapp:+919471957184'
-//       });
-//       console.log("sent")
-//     } catch (error) {
-//       console.error(error);
-//       console.log("failed")
-//     }
-//   };
 
   const handleChange=(e)=>{
     setInput({...input,[e.target.name]: e.target.value})
